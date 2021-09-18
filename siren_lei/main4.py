@@ -39,7 +39,9 @@ spark_df = spark_df.withColumn("lei_length", F.expr('lei rlike "^(?![0-9a-zA-Z]{
 
 #not_good= spark_df.filter(length(col("lei")) != 20).count()
 not_good= spark_df.filter(F.expr(' length(lei) != 20')).count()
-print(not_good)
+
+dd= spark_df.filter(F.expr('lei rlike "^(?![0-9a-zA-Z]{20}$)"')).count()
+print(f'dd = {dd}')
 
 
 spark_df.show(10, False)
