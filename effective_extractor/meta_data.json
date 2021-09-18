@@ -1,0 +1,28 @@
+{"excels_tables":
+                    [
+                        {
+                            "hive_table": "parm_test_patern",
+                            "hive_table_full": "parm_test_patern_full",
+                            "excel_path": "parametrage/names_*.xlsx",
+                            "excel_sheet_name": "one",
+                            "excel_usecols": null,
+                            "excel_header": 1,
+                            "excel_names": null,
+                            "excel_nrows": null,
+                            "schema_cols": null,
+                            "partition_cols": null
+                        },
+                        {
+                            "hive_table": "parm_test_patern",
+                            "hive_table_full": "parm_test_patern_full",
+                            "excel_path": "metiers/metiers_*.xlsx",
+                            "excel_sheet_name": "one",
+                            "excel_usecols": null,
+                            "excel_header": 1,
+                            "excel_names": null,
+                            "excel_nrows": null,
+                            "schema_cols": null,
+                            "partition_cols": null
+                        }
+                    ]
+}
