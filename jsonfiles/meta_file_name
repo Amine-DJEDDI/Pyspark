@@ -1,0 +1,1221 @@
+[
+    {
+        "excel_path": "collect_filiales/*_collecte_filiales_sfil.xlsx",
+        "excel_sheet_name": "concentration_nominale",
+        "excel_usecols": "B:N",
+        "excel_header": 33,
+        "excel_nrows": null,
+        "hive_table": "collecte_sfil_concentration_nominale_detail",
+        "schema_cols": [
+            {
+                "col_name": "groupe_influence_economique",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "num_siren",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "num_lei",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "type_groupe",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "type_balois",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "rating_externe_lt",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "rating_interne_lt",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "equiv_notation_interne_dans_grille_standart_poors",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition_mig",
+                "col_type": "double",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_mig",
+                "col_type": "double",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition_hors_mig",
+                "col_type": "double",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_hors_mig",
+                "col_type": "double",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "commentaires",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            }
+        ],
+        "partition_cols": null,
+        "cols_to_generate": [
+            {
+                "col_name": "date_arrete",
+                "expression": "to_date(substring(xx_filename, 0,8),\"yyyyMMdd\")"
+            }
+        ],
+        "hive_table_full": "collecte_sfil_concentration_nominale_detail_full"
+    },
+    {
+        "excel_path": "collect_filiales/*_collecte_filiales_sfil.xlsx",
+        "excel_sheet_name": "concentration_geographique",
+        "excel_usecols": "B:H",
+        "excel_header": 24,
+        "excel_nrows": 253,
+        "hive_table": "collecte_sfil_concentration_geographique_detail",
+        "schema_cols": [
+            {
+                "col_name": "zone_exposition",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "code_pays",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_taux_court_terme",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_creditexport",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "commentaires",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            }
+        ],
+        "partition_cols": null,
+        "cols_to_generate": [
+            {
+                "col_name": "date_arrete",
+                "expression": "to_date(substring(xx_filename, 0,8),\"yyyyMMdd\")"
+            }
+        ],
+        "hive_table_full": "collecte_sfil_concentration_geographique_detail_full"
+    },
+    {
+        "excel_path": "collect_filiales/*_collecte_filiales_sfil.xlsx",
+        "excel_sheet_name": "concentration_sectorielle",
+        "excel_usecols": "B:P",
+        "excel_header": 26,
+        "excel_nrows": 30,
+        "hive_table": "collecte_sfil_concentration_sectorielle_agrege",
+        "schema_cols": [
+            {
+                "col_name": "secteur_economique",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition_mig",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_mig",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "col_vide",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition_hors_mig",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_hors_mig",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_prets_creances",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_participations_mises_en_equivalence",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_actions_hors_part_meq",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_covered_bonds",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_dettes_subordonnes",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_titres_dettes",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_actifs_immobiliers",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "controles",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "commentaires",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            }
+        ],
+        "partition_cols": null,
+        "cols_to_generate": [
+            {
+                "col_name": "date_arrete",
+                "expression": "to_date(substring(xx_filename, 0,8),\"yyyyMMdd\")"
+            }
+        ],
+        "hive_table_full": "collecte_sfil_concentration_sectorielle_agrege_full"
+    },
+    {
+        "excel_path": "collect_filiales/*_collecte_filiales_sfil.xlsx",
+        "excel_sheet_name": "exposition_intragroupe",
+        "excel_usecols": "B:D",
+        "excel_header": 21,
+        "excel_nrows": 6,
+        "hive_table": "collecte_sfil_exposition_intragroupe_detail",
+        "schema_cols": [
+            {
+                "col_name": "entite_groupe",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            }
+        ],
+        "partition_cols": null,
+        "cols_to_generate": [
+            {
+                "col_name": "date_arrete",
+                "expression": "to_date(substring(xx_filename, 0,8),\"yyyyMMdd\")"
+            }
+        ],
+        "hive_table_full": "collecte_sfil_exposition_intragroupe_detail_full"
+    },
+    {
+        "excel_path": "collect_filiales/*_collecte_filiales_sfil.xlsx",
+        "excel_sheet_name": "risque_credit",
+        "excel_usecols": "B:E",
+        "excel_header": 23,
+        "excel_nrows": 28,
+        "hive_table": "collecte_sfil_risque_credit_agrege",
+        "schema_cols": [
+            {
+                "col_name": "donnees",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "controles",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "commentaires",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            }
+        ],
+        "partition_cols": null,
+        "cols_to_generate": [
+            {
+                "col_name": "date_arrete",
+                "expression": "to_date(substring(xx_filename, 0,8),\"yyyyMMdd\")"
+            }
+        ],
+        "hive_table_full": "collecte_sfil_risque_credit_agrege_full"
+    },
+    {
+        "excel_path": "collect_filiales/*_collecte_filiales_lbp.xlsx",
+        "excel_sheet_name": "concentration_nominale",
+        "excel_usecols": "B:N",
+        "excel_header": 33,
+        "excel_nrows": null,
+        "hive_table": "collecte_lbp_concentration_nominale_detail",
+        "schema_cols": [
+            {
+                "col_name": "groupe_influence_economique",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "num_siren",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "num_lei",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "type_groupe",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "type_balois",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "rating_externe_lt",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "rating_interne_lt",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "equiv_notation_interne_dans_grille_standart_poors",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition_mig",
+                "col_type": "double",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_mig",
+                "col_type": "double",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition_hors_mig",
+                "col_type": "double",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_hors_mig",
+                "col_type": "double",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "commentaires",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            }
+        ],
+        "partition_cols": null,
+        "cols_to_generate": [
+            {
+                "col_name": "date_arrete",
+                "expression": "to_date(substring(xx_filename, 0,8),\"yyyyMMdd\")"
+            }
+        ],
+        "hive_table_full": "collecte_lbp_concentration_nominale_detail_full"
+    },
+    {
+        "excel_path": "collect_filiales/*_collecte_filiales_lbp.xlsx",
+        "excel_sheet_name": "concentration_geographique",
+        "excel_usecols": "B:H",
+        "excel_header": 24,
+        "excel_nrows": 253,
+        "hive_table": "collecte_lbp_concentration_geographique_detail",
+        "schema_cols": [
+            {
+                "col_name": "zone_exposition",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "code_pays",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_taux_court_terme",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_creditexport",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "commentaires",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            }
+        ],
+        "partition_cols": null,
+        "cols_to_generate": [
+            {
+                "col_name": "date_arrete",
+                "expression": "to_date(substring(xx_filename, 0,8),\"yyyyMMdd\")"
+            }
+        ],
+        "hive_table_full": "collecte_lbp_concentration_geographique_detail_full"
+    },
+    {
+        "excel_path": "collect_filiales/*_collecte_filiales_lbp.xlsx",
+        "excel_sheet_name": "concentration_sectorielle",
+        "excel_usecols": "B:P",
+        "excel_header": 26,
+        "excel_nrows": 30,
+        "hive_table": "collecte_lbp_concentration_sectorielle_agrege",
+        "schema_cols": [
+            {
+                "col_name": "secteur_economique",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition_mig",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_mig",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "col_vide",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition_hors_mig",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_hors_mig",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_prets_creances",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_participations_mises_en_equivalence",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_actions_hors_part_meq",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_covered_bonds",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_dettes_subordonnes",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_titres_dettes",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_actifs_immobiliers",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "controles",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "commentaires",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            }
+        ],
+        "partition_cols": null,
+        "cols_to_generate": [
+            {
+                "col_name": "date_arrete",
+                "expression": "to_date(substring(xx_filename, 0,8),\"yyyyMMdd\")"
+            }
+        ],
+        "hive_table_full": "collecte_lbp_concentration_sectorielle_agrege_full"
+    },
+    {
+        "excel_path": "collect_filiales/*_collecte_filiales_lbp.xlsx",
+        "excel_sheet_name": "exposition_intragroupe",
+        "excel_usecols": "B:D",
+        "excel_header": 21,
+        "excel_nrows": 6,
+        "hive_table": "collecte_lbp_exposition_intragroupe_detail",
+        "schema_cols": [
+            {
+                "col_name": "entite_groupe",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            }
+        ],
+        "partition_cols": null,
+        "cols_to_generate": [
+            {
+                "col_name": "date_arrete",
+                "expression": "to_date(substring(xx_filename, 0,8),\"yyyyMMdd\")"
+            }
+        ],
+        "hive_table_full": "collecte_lbp_exposition_intragroupe_detail_full"
+    },
+    {
+        "excel_path": "collect_filiales/*_collecte_filiales_lbp.xlsx",
+        "excel_sheet_name": "risque_credit",
+        "excel_usecols": "B:E",
+        "excel_header": 23,
+        "excel_nrows": 28,
+        "hive_table": "collecte_lbp_risque_credit_agrege",
+        "schema_cols": [
+            {
+                "col_name": "donnees",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "controles",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "commentaires",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            }
+        ],
+        "partition_cols": null,
+        "cols_to_generate": [
+            {
+                "col_name": "date_arrete",
+                "expression": "to_date(substring(xx_filename, 0,8),\"yyyyMMdd\")"
+            }
+        ],
+        "hive_table_full": "collecte_lbp_risque_credit_agrege_full"
+    },
+    {
+        "excel_path": "collect_filiales/*_collecte_filiales_bpi.xlsx",
+        "excel_sheet_name": "concentration_nominale",
+        "excel_usecols": "B:N",
+        "excel_header": 33,
+        "excel_nrows": null,
+        "hive_table": "collecte_bpi_concentration_nominale_detail",
+        "schema_cols": [
+            {
+                "col_name": "groupe_influence_economique",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "num_siren",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "num_lei",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "type_groupe",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "type_balois",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "rating_externe_lt",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "rating_interne_lt",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "equiv_notation_interne_dans_grille_standart_poors",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition_mig",
+                "col_type": "double",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_mig",
+                "col_type": "double",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition_hors_mig",
+                "col_type": "double",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_hors_mig",
+                "col_type": "double",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "commentaires",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            }
+        ],
+        "partition_cols": null,
+        "cols_to_generate": [
+            {
+                "col_name": "date_arrete",
+                "expression": "to_date(substring(xx_filename, 0,8),\"yyyyMMdd\")"
+            }
+        ],
+        "hive_table_full": "collecte_bpi_concentration_nominale_detail_full"
+    },
+    {
+        "excel_path": "collect_filiales/*_collecte_filiales_bpi.xlsx",
+        "excel_sheet_name": "concentration_geographique",
+        "excel_usecols": "B:H",
+        "excel_header": 24,
+        "excel_nrows": 253,
+        "hive_table": "collecte_bpi_concentration_geographique_detail",
+        "schema_cols": [
+            {
+                "col_name": "zone_exposition",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "code_pays",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_taux_court_terme",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_creditexport",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "commentaires",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            }
+        ],
+        "partition_cols": null,
+        "cols_to_generate": [
+            {
+                "col_name": "date_arrete",
+                "expression": "to_date(substring(xx_filename, 0,8),\"yyyyMMdd\")"
+            }
+        ],
+        "hive_table_full": "collecte_bpi_concentration_geographique_detail_full"
+    },
+    {
+        "excel_path": "collect_filiales/*_collecte_filiales_bpi.xlsx",
+        "excel_sheet_name": "concentration_sectorielle",
+        "excel_usecols": "B:P",
+        "excel_header": 26,
+        "excel_nrows": 30,
+        "hive_table": "collecte_bpi_concentration_sectorielle_agrege",
+        "schema_cols": [
+            {
+                "col_name": "secteur_economique",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition_mig",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_mig",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "col_vide",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition_hors_mig",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_hors_mig",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_prets_creances",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_participations_mises_en_equivalence",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_actions_hors_part_meq",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_covered_bonds",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_dettes_subordonnes",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_titres_dettes",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_actifs_immobiliers",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "controles",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "commentaires",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            }
+        ],
+        "partition_cols": null,
+        "cols_to_generate": [
+            {
+                "col_name": "date_arrete",
+                "expression": "to_date(substring(xx_filename, 0,8),\"yyyyMMdd\")"
+            }
+        ],
+        "hive_table_full": "collecte_bpi_concentration_sectorielle_agrege_full"
+    },
+    {
+        "excel_path": "collect_filiales/*_collecte_filiales_bpi.xlsx",
+        "excel_sheet_name": "exposition_intragroupe",
+        "excel_usecols": "B:D",
+        "excel_header": 21,
+        "excel_nrows": 6,
+        "hive_table": "collecte_bpi_exposition_intragroupe_detail",
+        "schema_cols": [
+            {
+                "col_name": "entite_groupe",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            }
+        ],
+        "partition_cols": null,
+        "cols_to_generate": [
+            {
+                "col_name": "date_arrete",
+                "expression": "to_date(substring(xx_filename, 0,8),\"yyyyMMdd\")"
+            }
+        ],
+        "hive_table_full": "collecte_bpi_exposition_intragroupe_detail_full"
+    },
+    {
+        "excel_path": "collect_filiales/*_collecte_filiales_bpi.xlsx",
+        "excel_sheet_name": "risque_credit",
+        "excel_usecols": "B:E",
+        "excel_header": 23,
+        "excel_nrows": 28,
+        "hive_table": "collecte_bpi_risque_credit_agrege",
+        "schema_cols": [
+            {
+                "col_name": "donnees",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "controles",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "commentaires",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            }
+        ],
+        "partition_cols": null,
+        "cols_to_generate": [
+            {
+                "col_name": "date_arrete",
+                "expression": "to_date(substring(xx_filename, 0,8),\"yyyyMMdd\")"
+            }
+        ],
+        "hive_table_full": "collecte_bpi_risque_credit_agrege_full"
+    },
+    {
+        "excel_path": "collect_filiales/*_collecte_filiales_icade.xlsx",
+        "excel_sheet_name": "concentration_geographique",
+        "excel_usecols": "B:H",
+        "excel_header": 24,
+        "excel_nrows": 253,
+        "hive_table": "collecte_icade_concentration_geographique_detail",
+        "schema_cols": [
+            {
+                "col_name": "zone_exposition",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "code_pays",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_brut_exposition",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_taux_court_terme",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "montant_net_exposition_creditexport",
+                "col_type": "int",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            },
+            {
+                "col_name": "commentaires",
+                "col_type": "string",
+                "format": null,
+                "true_val": null,
+                "false_val": null
+            }
+        ],
+        "partition_cols": null,
+        "cols_to_generate": [
+            {
+                "col_name": "date_arrete",
+                "expression": "to_date(substring(xx_filename, 0,8),\"yyyyMMdd\")"
+            }
+        ],
+        "hive_table_full": "collecte_icade_concentration_geographique_detail_full"
+    }
+]
