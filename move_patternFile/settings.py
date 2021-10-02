@@ -12,3 +12,4 @@ trgt_path =  '/home/amine/Desktop/shell_test/pattern1/zone_b'
 
 
 
+

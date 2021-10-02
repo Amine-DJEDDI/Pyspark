@@ -5,6 +5,8 @@ this code is about to :
 
 
 '''
+pattern 1 :
+
 for displaying all pattern recursivly : use of /**/
 recursivly means : all files of the directory and the sub directory that match the pattern
 file_list = glob.glob(src_path+"/**/"+"/*.xlsx", recursive=True)
