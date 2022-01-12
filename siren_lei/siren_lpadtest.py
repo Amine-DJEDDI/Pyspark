@@ -23,7 +23,7 @@ spark_df.show()
 
 
 
-spark_df = spark_df.withColumn('siren', F.expr("CASE WHEN length(siren) < 9 THEN lpad(siren, 9, 0) ELSE siren END"))
+spark_df = spark_df.withColumn('siren', F.expr("CASE WHEN length(siren) < 9 and rlike(siren,'^[0-9]*$')  THEN lpad(siren, 9, 0) ELSE siren END"))
 
 spark_df.show()
 
