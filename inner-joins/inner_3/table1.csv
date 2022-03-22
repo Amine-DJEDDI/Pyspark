@@ -1,0 +1,11 @@
+staff_id;first_name;last_name;manager_id
+1;Fabiola;Jackson;;
+2;Mariola;anchi;1;
+3;Saviola;Barti;2;
+4;Rami;jaki;2;
+5;Venita;Daneil;3;
+6;Layla;Terrel;3;
+7;Janette;Mackso;4;
+8;Genna;Beni;4;
+9;Nourdine;Benor;4;
+

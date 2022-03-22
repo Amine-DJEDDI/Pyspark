@@ -1,0 +1,4 @@
+performed :
+simple inner join between two tables :
+some colmn values of join are not similar
+this lead to drop rows where id are not similar

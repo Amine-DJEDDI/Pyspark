@@ -1,0 +1,4 @@
+performed :
+simple inner self join :
+some colmn valuesof join are not similar
+this lead to drop rows where id are not similar 
